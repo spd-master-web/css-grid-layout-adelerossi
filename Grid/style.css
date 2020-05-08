@@ -1,0 +1,72 @@
+:root {
+  --gray: #dbe1d7;
+  --blue: #2c2a7d;
+  --lightblue: #009ecd;
+  --yellow: #d3b310;
+  --green: #008141;
+  --red: #c5181e;
+  --pink: #ce0177;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+:focus {
+  outline: 0;
+}
+
+body {
+  background-color: var(--gray);
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+}
+
+.container {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(5, 1fr); /* '1' repeat(5, 25vh) */
+  grid-column-gap: 2.5vw; /* preferibile vw per lo spazio tra le colonne, perché si rifà alla larghezza */
+  grid-row-gap: 2.5vh;
+}
+
+.item, .header, .menu, .mobile, .main, .footer {  /* '2' vale per tutti essendo tutti div in questo caso si potrebbe mettere solamente:  .container > div { */
+  background-color: var(--lightblue);
+/*  height: 25vh; */ /* '3' se vale per tutti si potrebbe mettere in alto, vedi appunto '1' - questo inoltre forza l'altezza 25vh all box "main", per questo non prende la dimensione di 2 righe */
+  text-align: center;
+}
+
+.header { 
+  grid-column-start: 2;
+  grid-column-end: 5;		/* ok per l'es, direi preferibile solo il grid-column: 2 / 5 come usato altrove, cmq ok */
+  grid-row-start: 1;
+	/*row-end*/
+}
+
+.menu {
+  grid-column-start: 2;
+  grid-column-end: 4;
+  grid-row-start: 2;
+	/*row-end*/
+}
+
+.mobile {
+  grid-row-start: 2;
+	/*row-end*/
+  grid-column: 4;
+	/*column-end*/
+}
+
+.main {
+  grid-row: 3 / 5;
+  grid-column: 2 / 5;
+  
+}
+
+.footer {
+  grid-column: 1 / 6;
+  grid-row: 5 / 6;
+}

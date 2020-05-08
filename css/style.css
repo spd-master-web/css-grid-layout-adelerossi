@@ -1,1 +1,129 @@
 /* CSS Grid */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* reset focus per rimozione bordo browser sul focus oggetti */
+:focus {
+  outline: 0;
+}
+
+body {
+  background-color: #fff;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+}
+
+
+
+.container {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-rows: auto auto auto;
+  
+  justify-content: center;
+  text-align: center;
+}
+
+.logo {
+  width: 227px;
+  height: 147px;
+  margin-bottom: 5em;
+  margin-top: 5em;
+}
+
+h1 {
+  text-transform: uppercase;
+  margin-bottom: 1em;
+}
+
+h2 {
+  margin-bottom: 1em;
+}
+
+.navigation {
+  list-style: none;
+  width: 100%;
+}
+
+.navigation li {
+  float: left;
+  width: 30%;
+  text-align: center;
+  margin-bottom: 3em;
+}
+
+.navigation li + li {
+  padding: 0 2.5%;
+  border-left: 1px solid black;
+}
+
+.navigation a {
+  text-decoration: none;
+  color: black;
+}
+
+.navigation a:hover, .navigation a:focus {
+
+  color: red;
+
+}
+
+.container-boots, .container-sandals, .container-sneakers{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 10px;
+  row-gap: 10px;
+  align-items: content;
+
+}
+
+.sections {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  margin-bottom: 2em;
+  border-bottom: 1px solid black;
+  padding: 1em;
+  
+
+  
+}
+
+
+
+.sections img {
+  width: 100%;
+  height: auto;
+  box-shadow: 5px px 8px #888888;
+}
+
+.container-boots span {
+  display: block;
+  width: 100%;
+  text-align: center;
+}
+
+.container-sandals span {
+  display: block;
+  width: 100%;
+  text-align: center;
+}
+
+h2, h4 {
+  text-align: center;
+  padding: 10px;
+}
+
+.container > div:nth-child(15) {
+
+}
+
+.container-sandals {
+  margin-bottom: 5em;
+}
+
